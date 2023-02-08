@@ -19,7 +19,7 @@ spec:
         controller:
           service:
             annotations:
-              "service\.beta\.kubernetes\.io/azure-load-balancer-health-probe-request-path"=/healthz
+              service.beta.kubernetes.ioazure-load-balancer-health-probe-request-path=/healthz
   syncPolicy:
     automated:
       prune: true
