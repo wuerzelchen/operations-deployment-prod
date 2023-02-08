@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: {{ .Values.destination.namespace }}
     server: {{ .Values.destination.server }}
-  project: default
+  project: {{ .Values.project }}
   source:
     chart: cert-manager
     repoURL: https://charts.jetstack.io
