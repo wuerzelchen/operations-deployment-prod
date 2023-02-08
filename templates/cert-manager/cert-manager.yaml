@@ -10,6 +10,12 @@ spec:
     namespace: {{ .Values.destination.namespace }}
     server: {{ .Values.destination.server }}
   project: {{ .Values.project }}
+  ignoreDifferences:
+  - group: admissionregistration.k8s.io
+    kind: ValidatingWebhookConfiguration
+    name: cert-manager-webhook
+    jqPathExpressions:
+      - .webhooks[].namespaceSelector.matchExpressions[] | select(.key == "control-plane")
   source:
     chart: cert-manager
     repoURL: https://charts.jetstack.io
