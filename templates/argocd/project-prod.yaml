@@ -18,7 +18,7 @@ spec:
   # Destination clusters can be identified by 'server', 'name', or both.
   destinations:
   - name: in-cluster
-    namespace: *
+    namespace: '*'
     server: {{ .Values.destination.server }}
 
   # Deny all cluster-scoped resources from being created, except for Namespace
