@@ -1,0 +1,4 @@
+destination:
+  server: https://kubernetes.default.svc
+  gitopsNamespace: argocd
+  namespace: ops-prod
